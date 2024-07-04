@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.logo{
+.logo {
     top: 20px;
     left: -20px;
     position: fixed;
     height: 100px;
     width: auto;
 }
-.body{
+
+.body {
     background: url("../img/bg.png"); 
     min-height: 100vh;
     background-size: 100vw 100vh;
@@ -21,7 +24,7 @@
     align-items: center;
 }
 
-#scoreBox{
+#scoreBox {
     position: absolute;
     top: 9px;
     right: 200px;
@@ -30,7 +33,7 @@
     font-family: 'New Tegomin', serif;
 }
 
-#hiscoreBox{
+#hiscoreBox {
     position: absolute;
     top: 59px;
     right: 140px;
@@ -39,7 +42,7 @@
     font-family: 'New Tegomin', serif;
 }
 
-#board{
+#board {
     background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
     width: 90vmin;
     height: 92vmin;
@@ -49,40 +52,40 @@
     grid-template-columns: repeat(18, 1fr);
 }
 
-.head{
+.head {
     background: linear-gradient(rgb(4, 180, 27), red);
     border: 2px solid rgb(34, 4, 34); 
     transform: scale(1.02);
     border-radius: 15px;
 }
 
-.snake{
+.snake {
     background: linear-gradient(rgb(2, 74, 12), rgb(91, 234, 78));
     border: .25vmin solid black;
     border-radius: 18px;
 }
 
-.food{
+.food {
     background: linear-gradient(red, rgb(196, 42, 68));
     border: .30vmin solid black;
     border-radius: 30px;
-} 
+}
 
-/* Adding styles for touch control buttons */
+/* Touch control buttons */
 .touch-controls {
     position: fixed;
-    bottom: 50px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
 }
 
 .touch-button {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     font-size: 24px;
@@ -92,14 +95,10 @@
     border-radius: 50%;
     cursor: pointer;
     user-select: none;
-}
-
-.touch-button:active {
-    background-color: rgba(0, 0, 0, 0.9);
+    transition: background-color 0.3s ease;
 }
 
 .touch-button-container {
     display: flex;
-    flex-direction: column;
     gap: 10px;
 }
