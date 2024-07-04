@@ -95,22 +95,22 @@ function gameEngine() {
 
 // Touch control buttons event listeners
 document.getElementById('up').addEventListener('click', () => {
-    if (inputDir.y !== 1) inputDir = {x: 0, y: -1};
+    inputDir = {x: 0, y: -1};
     moveSound.play();
 });
 
 document.getElementById('down').addEventListener('click', () => {
-    if (inputDir.y !== -1) inputDir = {x: 0, y: 1};
+    inputDir = {x: 0, y: 1};
     moveSound.play();
 });
 
 document.getElementById('left').addEventListener('click', () => {
-    if (inputDir.x !== 1) inputDir = {x: -1, y: 0};
+    inputDir = {x: -1, y: 0};
     moveSound.play();
 });
 
 document.getElementById('right').addEventListener('click', () => {
-    if (inputDir.x !== -1) inputDir = {x: 1, y: 0};
+    inputDir = {x: 1, y: 0};
     moveSound.play();
 });
 
@@ -131,23 +131,26 @@ window.requestAnimationFrame(main);
 window.addEventListener('keydown', e => {
     switch (e.key) {
         case "ArrowUp":
-            if (inputDir.y !== 1) inputDir = {x: 0, y: -1};
+            inputDir = {x: 0, y: -1};
+            moveSound.play();
             break;
 
         case "ArrowDown":
-            if (inputDir.y !== -1) inputDir = {x: 0, y: 1};
+            inputDir = {x: 0, y: 1};
+            moveSound.play();
             break;
 
         case "ArrowLeft":
-            if (inputDir.x !== 1) inputDir = {x: -1, y: 0};
+            inputDir = {x: -1, y: 0};
+            moveSound.play();
             break;
 
         case "ArrowRight":
-            if (inputDir.x !== -1) inputDir = {x: 1, y: 0};
+            inputDir = {x: 1, y: 0};
+            moveSound.play();
             break;
 
         default:
             break;
     }
-    moveSound.play();
 });
