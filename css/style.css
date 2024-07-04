@@ -97,3 +97,9 @@
 .touch-button:active {
     background-color: rgba(0, 0, 0, 0.9);
 }
+
+.touch-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
