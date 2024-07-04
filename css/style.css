@@ -74,12 +74,11 @@
 /* Touch control buttons */
 .touch-controls {
     position: fixed;
-    bottom: 20px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -98,7 +97,6 @@
     transition: background-color 0.3s ease;
 }
 
-.touch-button-container {
-    display: flex;
-    gap: 10px;
+.touch-button:active {
+    background-color: rgba(0, 0, 0, 0.9);
 }

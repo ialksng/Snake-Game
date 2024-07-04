@@ -93,12 +93,7 @@ function gameEngine() {
     board.appendChild(foodElement);
 }
 
-// Touch control buttons
-document.getElementById('left').addEventListener('click', () => {
-    if (inputDir.x !== 1) inputDir = {x: -1, y: 0};
-    moveSound.play();
-});
-
+// Touch control buttons event listeners
 document.getElementById('up').addEventListener('click', () => {
     if (inputDir.y !== 1) inputDir = {x: 0, y: -1};
     moveSound.play();
@@ -109,46 +104,15 @@ document.getElementById('down').addEventListener('click', () => {
     moveSound.play();
 });
 
+document.getElementById('left').addEventListener('click', () => {
+    if (inputDir.x !== 1) inputDir = {x: -1, y: 0};
+    moveSound.play();
+});
+
 document.getElementById('right').addEventListener('click', () => {
     if (inputDir.x !== -1) inputDir = {x: 1, y: 0};
     moveSound.play();
 });
-
-// Touch gesture support
-let touchStartX = 0;
-let touchStartY = 0;
-let touchEndX = 0;
-let touchEndY = 0;
-
-document.addEventListener('touchstart', function(e) {
-    touchStartX = e.changedTouches[0].screenX;
-    touchStartY = e.changedTouches[0].screenY;
-}, false);
-
-document.addEventListener('touchend', function(e) {
-    touchEndX = e.changedTouches[0].screenX;
-    touchEndY = e.changedTouches[0].screenY;
-    handleGesture();
-}, false);
-
-function handleGesture() {
-    const distX = touchEndX - touchStartX;
-    const distY = touchEndY - touchStartY;
-    if (Math.abs(distX) > Math.abs(distY)) {
-        if (distX > 0) {
-            if (inputDir.x !== -1) inputDir = {x: 1, y: 0}; 
-        } else {
-            if (inputDir.x !== 1) inputDir = {x: -1, y: 0}; 
-        }
-    } else {
-        if (distY > 0) {
-            if (inputDir.y !== -1) inputDir = {x: 0, y: 1}; 
-        } else {
-            if (inputDir.y !== 1) inputDir = {x: 0, y: -1}; 
-        }
-    }
-    moveSound.play();
-}
 
 // Initialize game
 musicSound.play();
