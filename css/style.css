@@ -53,13 +53,13 @@
     background: linear-gradient(rgb(4, 180, 27), red);
     border: 2px solid rgb(34, 4, 34); 
     transform: scale(1.02);
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .snake{
     background: linear-gradient(rgb(2, 74, 12), rgb(91, 234, 78));
     border: .25vmin solid black;
-    border-radius: 15px;
+    border-radius: 18px;
 }
 
 .food{
