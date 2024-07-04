@@ -4,8 +4,15 @@
     margin: 0;
 }
 
+.logo{
+    top: 20px;
+    left: -20px;
+    position: fixed;
+    height: 100px;
+    width: auto;
+}
 .body{
-    background: url("../img/bg.jpg"); 
+    background: url("../img/bg.png"); 
     min-height: 100vh;
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
