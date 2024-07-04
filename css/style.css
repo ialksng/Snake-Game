@@ -66,4 +66,34 @@
     background: linear-gradient(red, rgb(196, 42, 68));
     border: .30vmin solid black;
     border-radius: 30px;
+} 
+
+/* Adding styles for touch control buttons */
+.touch-controls {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.touch-button {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.touch-button:active {
+    background-color: rgba(0, 0, 0, 0.9);
 }
